@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
     <head>
 
@@ -20,5 +20,45 @@
 
           <h2 id="resultat"></h2>
         <script src="index.js"></script>
+    </body>
+</html>-->
+
+
+<html>
+    <head>
+      <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+      <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+
+        <div>
+            <img src="https://firebasestorage.googleapis.com/v0/b/perret-c54f6.appspot.com/o/m1.png?alt=media&token=c1b3b55e-09bd-44a2-877e-60dceccd6363">
+        </div>
+
+        <script>
+          //---------------------  Firebase TOKEN -------------------------------
+                      var firebaseConfig = {
+                        apiKey: "AIzaSyCjXrzmWoJulrcWLvGIacL4GyUREiMQQQ0",
+                        authDomain: "perret-c54f6.firebaseapp.com",
+    projectId: "perret-c54f6",
+    storageBucket: "perret-c54f6.appspot.com",
+    messagingSenderId: "335127062912",
+    appId: "1:335127062912:web:55863fdcaae25e7f353965",
+    measurementId: "G-HJQHWC6ZNH"
+                      }; // ici toutes les infos de la base de donnée qui permettent de la lire 
+
+//----------------- FIREBASE INITIALISATION -------------------------------------------------
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true }); // ici l'initialisation de la base de donnée
+//------------------------------------------------------------------------------------
+        
+        </script>
+        <script src="index.js"></script>
+          
+          
     </body>
 </html>
