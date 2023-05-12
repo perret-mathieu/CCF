@@ -52,4 +52,39 @@ function afficheitem(doc){
 
 items.map(item=>afficheitem(item)); // permet de parcourir le tableau "item" et de leur donner les caractéristiques définies dans la fonction au dessus.
 
+const btn = document.querySelector('.btn-container');
 
+
+function vide(){
+    list.innerHTML=""
+    btn.innerHTML=""
+    }
+    
+
+function pluscher(){
+    vide();
+    const prixMax = Math.max(...items.map(item => item.prix));
+    document.getElementById("resultat").innerHTML = "Le prix le plus cher est " + prixMax + " euros."; 
+}
+
+function moinscher(){
+    vide();
+    const prixMin = Math.min(...items.map(item => item.prix));
+    document.getElementById("resultat").innerHTML = "Le prix le moins cher est " + prixMin + " euros.";
+}
+
+function moyenne(){
+    vide();
+    const totalPrix = items.reduce((total, item) => total + item.prix, 0);
+  const moyennePrix = totalPrix / items.length;
+  document.getElementById("resultat").innerHTML = "La moyenne des prix est de " + moyennePrix + " euros.";
+}
+
+function tous(items){
+    vide();
+    let resultat = "";
+    for (let i = 0; i < items.length; i++) {
+      resultat += items[i];
+    }
+    document.getElementById("resultat").innerHTML = resultat;
+  }

@@ -66,3 +66,26 @@ text-shadow: 2px 2px #111111
     flex-direction: column;
   }
 }
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
